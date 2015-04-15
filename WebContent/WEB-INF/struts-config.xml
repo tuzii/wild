@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="templateTypeForm" type="com.excellence.iexp.forms.TemplateTypeForm" />
+		<form-bean name="templateForm" type="com.excellence.iexp.forms.TemplateForm" />
+		<form-bean name="pageContainerModuleForm" type="com.excellence.iexp.forms.PageContainerModuleForm" />
+		<form-bean name="pageForm" type="com.excellence.iexp.forms.PageForm" />
+		<form-bean name="moduleForm" type="com.excellence.iexp.forms.ModuleForm" />
+		<form-bean name="pageTypeForm" type="com.excellence.iexp.forms.PageTypeForm" />
+		<form-bean name="moduleTypeForm" type="com.excellence.iexp.forms.ModuleTypeForm" />
+		<form-bean name="moduleRoleForm" type="com.excellence.iexp.forms.ModuleRoleForm" />
+		<form-bean name="menuForm" type="com.excellence.iexp.forms.MenuForm" />
+	</form-beans>
+	<action-mappings>
+		<action path="/templateType" name="templateTypeForm" parameter="method" scope="request" type="com.excellence.iexp.actions.TemplateTypeAction">
+			<forward name="view_page" path="/pages/TemplateType/TemplateTypeView.jsp"/>
+			<forward name="edit_page" path="/pages/TemplateType/TemplateTypeEdit.jsp"/>
+			<forward name="list_page" path="/pages/TemplateType/TemplateTypeList.jsp"/>
+		</action>
+		<action path="/template" name="templateForm" parameter="method" scope="request" type="com.excellence.iexp.actions.TemplateAction">
+			<forward name="view_page" path="/pages/Template/TemplateView.jsp"/>
+			<forward name="edit_page" path="/pages/Template/TemplateEdit.jsp"/>
+			<forward name="list_page" path="/pages/Template/TemplateList.jsp"/>
+			<forward name="left_tree_nav" path="/pages/Template/TemplateLeftTreeNav.jsp"/>
+		</action>
+		<action path="/pageContainerModule" name="pageContainerModuleForm" parameter="method" scope="request" type="com.excellence.iexp.actions.PageContainerModuleAction">
+			<forward name="view_page" path="/pages/PageContainerModule/PageContainerModuleView.jsp"/>
+			<forward name="edit_page" path="/pages/PageContainerModule/PageContainerModuleEdit.jsp"/>
+			<forward name="list_page" path="/pages/PageContainerModule/PageContainerModuleList.jsp"/>
+		</action>
+		<action path="/page" name="pageForm" parameter="method" scope="request" type="com.excellence.iexp.actions.PageAction">
+			<forward name="view_page" path="/pages/Page/PageView.jsp"/>
+			<forward name="edit_page" path="/pages/Page/PageEdit.jsp"/>
+			<forward name="list_page" path="/pages/Page/PageList.jsp"/>
+		</action>
+		<action path="/module" name="moduleForm" parameter="method" scope="request" type="com.excellence.iexp.actions.ModuleAction">
+			<forward name="view_page" path="/pages/Module/ModuleView.jsp"/>
+			<forward name="edit_page" path="/pages/Module/ModuleEdit.jsp"/>
+			<forward name="list_page" path="/pages/Module/ModuleList.jsp"/>
+		</action>
+		<action path="/pageType" name="pageTypeForm" parameter="method" scope="request" type="com.excellence.iexp.actions.PageTypeAction">
+			<forward name="view_page" path="/pages/PageType/PageTypeView.jsp"/>
+			<forward name="edit_page" path="/pages/PageType/PageTypeEdit.jsp"/>
+			<forward name="list_page" path="/pages/PageType/PageTypeList.jsp"/>
+		</action>
+		<action path="/moduleType" name="moduleTypeForm" parameter="method" scope="request" type="com.excellence.iexp.actions.ModuleTypeAction">
+			<forward name="view_page" path="/pages/ModuleType/ModuleTypeView.jsp"/>
+			<forward name="edit_page" path="/pages/ModuleType/ModuleTypeEdit.jsp"/>
+			<forward name="list_page" path="/pages/ModuleType/ModuleTypeList.jsp"/>
+		</action>
+		<action path="/moduleRole" name="moduleRoleForm" parameter="method" scope="request" type="com.excellence.iexp.actions.ModuleRoleAction">
+			<forward name="view_page" path="/pages/ModuleRole/ModuleRoleView.jsp"/>
+			<forward name="edit_page" path="/pages/ModuleRole/ModuleRoleEdit.jsp"/>
+			<forward name="list_page" path="/pages/ModuleRole/ModuleRoleList.jsp"/>
+		</action>
+		<action path="/menu" name="menuForm" parameter="method" scope="request" type="com.excellence.iexp.actions.MenuAction">
+			<forward name="view_page" path="/pages/Menu/MenuView.jsp"/>
+			<forward name="edit_page" path="/pages/Menu/MenuEdit.jsp"/>
+			<forward name="list_page" path="/pages/Menu/MenuList.jsp"/>
+		</action>
+		<action path="/tree" parameter="method" scope="request" type="com.excellence.iexp.actions.TreeAction">
+		</action>
+	</action-mappings>
+
+	<plug-in className="com.excellence.common.base.utils.ConverterPlugIn" />
+</struts-config>
